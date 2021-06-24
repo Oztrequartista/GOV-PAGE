@@ -40,9 +40,10 @@
   margin-left: auto;
 }
 .pageContainer {
-  margin-top: 5vh;
-  max-width: 80vw;
+  max-width: 87vw;
   min-height: 100vh;
+  margin: auto;
+  margin-top: 5vh;
 }
 .page {
   background-color: white;
@@ -56,4 +57,46 @@
 
 #hove:hover {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.locationBar {
+  height: 30%;
+  width: 80%;
+  /* border: 1px solid red; */
+}
+
+.progressBar {
+  min-height: 15vh;
+  width: 25%;
+  /* border: 2px solid red; */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: auto;
+}
+
+.dots {
+  min-width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: rgb(255, 209, 71);
+  position: relative;
+}
+.dotsInner {
+  background-color: rgb(220, 220, 220);
+  min-width: 28px;
+  height: 28px;
+  border-radius: 50%;
+
+  position: relative;
+}
+
+.dotsInnerActive {
+  background: white;
+  border-radius: 50%;
+  min-width: 40%;
+  height: 40%;
+  position: absolute;
+  left: 30%;
+  bottom: 30%;
 }
