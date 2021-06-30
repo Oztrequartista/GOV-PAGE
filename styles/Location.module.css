@@ -100,3 +100,23 @@
   left: 30%;
   bottom: 30%;
 }
+
+@media screen and (max-width: 480px) {
+  .navText {
+    text-align: center;
+  }
+  .progressBar {
+    width: 80%;
+    height: 10%;
+    border: 2px solid red;
+  }
+  .locationInput {
+    min-width: 120% !important;
+    margin: auto !important;
+    border: 2px solid red;
+  }
+  .formControl {
+    max-width: 100% !important;
+    margin: auto !important;
+  }
+}

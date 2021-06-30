@@ -162,6 +162,8 @@ const location = () => {
 
                 padding: "30px",
               }}
+              className={Styles.locationInput}
+              xs="12"
             >
               <FormControl
                 aria-label="Text input with radio button"
@@ -171,6 +173,7 @@ const location = () => {
                   marginBottom: "10px",
                 }}
                 disbaled
+                className={Styles.formControl}
               />
 
               <div

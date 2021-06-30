@@ -1,7 +1,15 @@
 import Head from "next/head";
 import Styles from "../styles/Home.module.css";
-import { Container, Navbar, Nav, Row, Col, Card } from "react-bootstrap";
-import { useState } from "react";
+import {
+  Container,
+  Navbar,
+  Nav,
+  Row,
+  Col,
+  Card,
+  Button,
+} from "react-bootstrap";
+import { useState, useEffect } from "react";
 import Modal from "./modal";
 import data from "../data";
 
@@ -43,6 +51,10 @@ export default function Home() {
   const [show, setShow] = useState(false);
   const [login, setLogin] = useState(false);
   const [items, setItems] = useState(data);
+
+  useEffect(() => {
+    setShow(true);
+  }, []);
 
   return (
     <Container className={Styles.holder} fluid>
@@ -95,15 +107,29 @@ export default function Home() {
           style={{
             fontWeight: "600px",
             fontSize: "16px",
+            padding: "10px",
           }}
         >
           NEW FEEDBACK
         </h3>
         <Container className={Styles.page} fluid>
-          <Row className="mt-5">
-            <Col>ProgressBar</Col>
+          <Row>
+            <div className={Styles.progressBar}>
+              <div className={Styles.dots}>
+                <div className={Styles.dotsInnerActive}></div>
+              </div>
+              <div className={Styles.dotsInner}>
+                <div></div>
+              </div>
+              <div className={Styles.dotsInner}>
+                <div></div>
+              </div>
+              <div className={Styles.dotsInner}>
+                <div></div>
+              </div>
+            </div>
           </Row>
-          <Row className="mt-5">
+          <Row>
             <Col style={{ textAlign: "center", fontSize: "20px" }}>
               What do you want to report about?
             </Col>
@@ -148,6 +174,27 @@ export default function Home() {
                 );
               })}
             </Row>
+            <br />
+            <hr />
+            <Button
+              variant="primary"
+              style={{
+                backgroundColor: "rgb(255, 209, 71)",
+                padding: "0 30px",
+
+                margin: "30px 0 30px 25%",
+
+                height: "50px",
+                fontSize: "18px",
+                width: "50%",
+                borderColor: "rgb(255, 209, 71)",
+                color: "rgb(37, 37, 37)",
+              }}
+              size="lg"
+              className={Styles.next}
+            >
+              Next
+            </Button>
           </Container>
         </Container>
       </Container>

@@ -23,9 +23,9 @@ const ModalFunc = ({ show, setShow, login, setLogin, items }) => {
 
   return (
     <>
-      <Button variant="primary" onClick={handleShow}>
+      {/* <Button variant="primary" onClick={handleShow}>
         Launch demo modal
-      </Button>
+      </Button> */}
 
       <Modal show={show} onHide={handleClose} size="lg">
         <Modal.Header
